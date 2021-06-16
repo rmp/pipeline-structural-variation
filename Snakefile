@@ -189,8 +189,8 @@ rule call_sniffles:
     conda: "env.yml"
     threads: 10
     shell:
-        "sniffles -t {threads} -m {input.BAM} -v {output.VCF} -s {params.read_support} -r {params.min_read_length} -q {params.min_mq} --genotype --report_read_strands"
-
+        "sniffles -t {threads} -m {input.BAM} -v {output.VCF} -s {params.read_support} -r {params.min_read_length} -q {params.min_mq} --genotype"
+#        "sniffles -t {threads} -m {input.BAM} -v {output.VCF} -s {params.read_support} -r {params.min_read_length} -q {params.min_mq} --genotype --report_read_strands"
 
 rule filter_region:
    input:
