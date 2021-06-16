@@ -32,7 +32,7 @@ print("Working directory: {}".format(WORKDIR))
 ### HELPER FUNCTIONS ####
 #########################
 
-def find_file_in_folder(folder, pattern=["*/*.fastq", "*/*.fastq.gz", "*.fastq", "*.fastq.gz"], single=False):
+def find_file_in_folder(folder, patterns=["*/*.fastq", "*/*.fastq.gz", "*.fastq", "*.fastq.gz"], single=False):
     if os.path.isfile(folder):
         return folder
     files = []
